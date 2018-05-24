@@ -1,0 +1,128 @@
+@import "vars"
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.site-header
+		min-height: 750px
+		.header-wrap
+			.header-center
+				.header-composition
+					.header-composition-welcome
+						.h1
+							font-size: 63px
+	.carousel-services-item
+		flex-direction: column
+	.s
+		&-gallery, &-review, &-partners
+			padding: 8% 0
+	.s-gallery
+		.h2
+			font-size: 24px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.site-header
+		.header-wrap
+			.header-center
+				.header-composition
+					.header-composition-welcome
+						.h1
+							font-size: 48px
+	.s
+		&-gallery 
+			.h2
+				text-align: center
+			.fotorama
+				margin-top: 60px
+		&-call
+			background-size: contain
+			background-position: left
+			text-align: center
+			&::before
+				// left: 30%
+				// width: 70%
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.site-header
+		min-height: 850px
+		.header-wrap
+			.header-center
+				.header-composition
+					.header-composition-welcome
+						.h1
+							font-size: 48px
+			.header-bottom
+				text-align: center
+	.s
+		&-gallery, &-review, &-partners
+			padding: 10% 0
+		&-call
+			background-size: cover
+			background-position: 20%
+			text-align: center
+			padding: 8% 0
+			&::before
+				// background: rgba($accent, .85)
+				background: radial-gradient(rgba($accent, .6), $accent)
+			.leave-request
+				text-align: left
+				padding-top: 30px
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.button
+		padding: 13px 18px
+		font-size: 11px
+	.site-header
+		min-height: initial
+		.top-line
+			.logo
+				margin-left: 15px
+				img
+					max-width: 105px
+			.phone
+				display: none
+			.hamburger
+				padding: 7px
+		.header-wrap
+			.header-center
+				.header-composition
+					margin-top: -60px
+					.header-composition-welcome
+						p
+							span
+								font-size: 8px
+						.h1
+							font-size: 26px
+							padding-bottom: 5px
+						strong
+							font-size: 14px
+							margin-top: 10px
+					.header-presentation-text
+						font-size: 12px
+						margin: 20px 0 30px
+						line-height: 1.6
+			.header-social
+				padding: 10px
+			.header-bottom
+				font-size: 13px
+				padding: 10px 0
+	.s
+		&-gallery, &-review, &-partners
+			padding: 11% 0
+		&-gallery 
+			.h2
+				margin-bottom: 30px
+			.fotorama
+				.fotorama__nav 
+					position: initial
+		&-call
+			padding: 11% 0
+			&::before
+			
+

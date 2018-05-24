@@ -424,14 +424,6 @@ $colors: $blue, $red, $accent
 		background-repeat: no-repeat
 		background-position: 37%  
 		padding: 5% 0
-		// &::before
-		// 	content: ''
-		// 	position: absolute
-		// 	top: 0
-		// 	left: 50%
-		// 	width: 50%
-		// 	height: 100%
-		// 	background-color: rgba($accent, .85)
 		&::before
 			content: ''
 			position: absolute
@@ -450,7 +442,7 @@ $colors: $blue, $red, $accent
 			p.formhead
 				font-size: 28px
 				font-weight: 800
-			input, select, textarea
+			input, select, textarea, .selectize-control .selectize-input
 				display: block
 				margin-top: 25px
 				width: 100%
@@ -462,17 +454,49 @@ $colors: $blue, $red, $accent
 				box-shadow: none
 				border-radius: 3px
 				color: #fff
+				font-size: 16px
 				&::placeholder
 					color: #f2f2f2
 					opacity: 1
-			select
-				padding: 11px 25px
-				option
+				option 
 					color: #777
+			select 
+				padding: 11px 25px
+			.selectize-control 
+				.selectize-input
+					padding: 9px 25px
+					box-shadow: none
+					text-align: left
+					line-height: inherit
+					overflow: inherit
+					&::before
+						display: none
+					input
+						font-size: inherit
+				.selectize-dropdown
+					background-color: lighten($accent, 10)
+					color: #fff
+					border: 2px solid rgba(#fff, .4)
+					border-bottom: 4px solid rgba(#fff, .4)
+					font-size: inherit
+					.active 
+						background-color: lighten($accent, 30)
+						transition: all .2s ease
+					.option
+						padding: 7px 25px
 			button
 				margin-top: 30px
+			.selectize-control.single .selectize-input:after
+				border-color: rgba(#fff, .6) transparent transparent transparent
+			.selectize-control.single .selectize-input.dropdown-active:after
+				border-color: transparent transparent rgba(#fff, .6) transparent  
 
-
+			.selectize-dropdown .active
+	
+	&-review
+		.h2 
+			font-size: 28px
+			font-weight: 800
 
 
 

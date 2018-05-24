@@ -68,6 +68,19 @@ $(function() {
 	}
 	carouselServices();
 
+
+	$(".reviews-carousel").owlCarousel({
+		items: 1,
+		nav: true,
+		smartSpeed:700,
+		loop: true,
+		autoplay: true,
+		autoplayHoverPause: true,
+		navText: ['<i class="fa fa-angle-double-left"></i>', '<i class="fa fa-angle-double-right"></i>'],
+		dots: true
+	});
+
+
 	// **********equalHeights**********
 	$('.carousel-services-item-content_composition').equalHeights();
 

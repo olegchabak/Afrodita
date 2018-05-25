@@ -71,7 +71,7 @@ $(function() {
 
 	$(".reviews-carousel").owlCarousel({
 		items: 1,
-		nav: true,
+		nav: false,
 		smartSpeed:700,
 		loop: true,
 		autoplay: true,

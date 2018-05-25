@@ -63,6 +63,8 @@ section
 
 .accent-text
 	color: $accent
+	&:hover
+		color: $accent
 
 ::selection
 	background-color: $accent
@@ -494,9 +496,66 @@ $colors: $blue, $red, $accent
 			.selectize-dropdown .active
 	
 	&-review
+		text-align: center
 		.h2 
 			font-size: 28px
 			font-weight: 800
+		.quotes
+			position: relative
+			&::before, &::after
+				content: ',,'
+				position: absolute
+				font-size: 40px
+				font-family: serif
+				color: $accent
+				font-weight: bold
+				line-height: 0 
+				display: block
+			&::before
+				transform: rotate(180deg)
+				top: 50%
+				left: -50px
+			&::after
+				top: 50%
+				right: -50px
+		.reviews-carousel
+			.review-item
+				.review-head
+					font-family: serif
+					font-style: italic
+					font-size: 22px
+					font-weight: bold
+					padding-left: 2px
+				.review-date
+					font-family: serif
+					font-style: italic
+					font-size: 18px
+					color: #999
+				.review-rating
+					font-size: 13px
+					margin-top: 13px
+					.fa
+						margin: 5px
+						color: $accent 
+				.review-text
+					margin-top: 20px
+					small
+						display: block
+						padding: 20px 0 10px
+			.owl-dots
+				.owl-dot
+					display: inline-block
+					width: 8px
+					height: 8px
+					background-color: #fff
+					border-radius: 50%
+					margin: 4px
+					transition: all 1s ease
+					outline: none
+				.owl-dot.active
+					background-color: $accent
+					transform: scale(1.3)
+
 
 
 

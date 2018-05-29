@@ -530,7 +530,7 @@ $colors: $blue, $red, $accent
 					font-family: serif
 					font-style: italic
 					font-size: 18px
-					color: #999
+					color: #bbb
 				.review-rating
 					font-size: 13px
 					margin-top: 13px
@@ -539,15 +539,18 @@ $colors: $blue, $red, $accent
 						color: $accent 
 				.review-text
 					margin-top: 20px
+					color: #bbb
 					small
 						display: block
 						padding: 20px 0 10px
+						a:visited
+							color: $accent
 			.owl-dots
 				.owl-dot
 					display: inline-block
 					width: 8px
 					height: 8px
-					background-color: #fff
+					background-color: #bbb
 					border-radius: 50%
 					margin: 4px
 					transition: all 1s ease
@@ -555,7 +558,41 @@ $colors: $blue, $red, $accent
 				.owl-dot.active
 					background-color: $accent
 					transform: scale(1.3)
-
+	
+	&-partners
+		.h2
+			font-size: 30px
+			font-weight: 800
+			margin: 0 0 20px 0
+		.partners-carousel
+			position: relative
+			.partners-carousel-item
+				img
+					width: auto
+					margin: auto
+					// border: 1px solid #000
+			.owl-nav
+				position: absolute
+				top: 50%
+				margin-top: -13px
+				width: 100%
+				font-size: 26px
+				button.owl-prev, button.owl-next
+					position: absolute
+					display: inline-block
+					z-index: 1
+					outline: none
+					opacity: .5
+					transition: opacity .2s ease
+					padding: 0 10px !important
+					&:hover 
+						opacity: 1
+					&:active
+						opacity: .5
+				button.owl-next
+					right: -10%
+				button.owl-prev
+					left: -10%
 
 
 

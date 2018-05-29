@@ -72,12 +72,47 @@ $(function() {
 	$(".reviews-carousel").owlCarousel({
 		items: 1,
 		nav: false,
-		smartSpeed:700,
+		smartSpeed:1000,
 		loop: true,
 		autoplay: true,
 		autoplayHoverPause: true,
-		navText: ['<i class="fa fa-angle-double-left"></i>', '<i class="fa fa-angle-double-right"></i>'],
-		dots: true
+		dots: true,
+		responsiveClass:true,
+		responsive: {
+			0: {
+				autoHeight: true
+			},
+			768: {
+				autoHeight: false
+			}
+		}
+		
+	});
+
+
+	$(".partners-carousel").owlCarousel({
+		items: 4,
+		nav: true,
+		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+		smartSpeed:700,
+		loop: true,
+		autoplay: true,
+		dots: false,
+		responsiveClass:true,
+		responsive: {
+			0: {
+				items: 1
+			},
+			550: {
+				items: 2
+			},
+			992: {
+				items: 3
+			},
+			1200: {
+				items: 4
+			}
+		}
 	});
 
 

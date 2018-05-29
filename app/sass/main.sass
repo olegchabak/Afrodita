@@ -46,9 +46,9 @@ section, header
 
 section
 	background-color: #fff
-	&.inverse
-		color: #fff
-		background-color: $dark
+.inverse
+	color: #fff
+	background-color: $dark
 .h1, .h2, .h3, .h4
 	text-transform: uppercase
 	line-height: 1.3
@@ -393,12 +393,12 @@ $colors: $blue, $red, $accent
 		opacity: .8
 
 .s
-	&-gallery, &-review, &-partners
-		padding: 5% 0
+	&-gallery, &-call, &-review, &-partners
+		padding: 3% 0
 
 
 	&-gallery
-		padding-bottom: 4%
+		padding: 3.5%
 		.h2
 			font-size: 28px
 			font-weight: 800
@@ -425,7 +425,6 @@ $colors: $blue, $red, $accent
 		background-size: contain
 		background-repeat: no-repeat
 		background-position: 37%  
-		padding: 5% 0
 		&::before
 			content: ''
 			position: absolute
@@ -593,6 +592,10 @@ $colors: $blue, $red, $accent
 					right: -10%
 				button.owl-prev
 					left: -10%
+
+footer.main-footer
+	padding: 3%
+	font-size: 14px
 
 
 

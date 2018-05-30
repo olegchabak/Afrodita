@@ -79,6 +79,7 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 	var buildFiles = gulp.src([
 		'app/*.html',
 		'app/.htaccess',
+		'app/mail.php',
 		]).pipe(gulp.dest('dist'));
 
 	var buildCss = gulp.src([
@@ -100,7 +101,7 @@ gulp.task('deploy', function() {
 	var conn = ftp.create({
 		host:      'hostname.com',
 		user:      'username',
-		password:  'userpassword',
+		password:  'password',
 		parallel:  10,
 		log: gutil.log
 	});
@@ -110,7 +111,7 @@ gulp.task('deploy', function() {
 	'dist/.htaccess',
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/path/to/folder/on/server'));
+	.pipe(conn.dest('/cheps.space/public_html'));
 
 });
 

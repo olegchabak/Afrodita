@@ -142,7 +142,9 @@ $(function() {
 	$('.carousel-services-item-content_composition').equalHeights();
 
 	// **********selectize**********
-	$('select').selectize();
+	if ($(window).width() > 700) {
+		$('select').selectize();
+	}
 
 	//E-mail Ajax Send
 	$("form.callback-form").submit(function() { //Change

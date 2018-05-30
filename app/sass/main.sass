@@ -70,6 +70,58 @@ section
 	background-color: $accent
 	color: #fff
 
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+
+.preloader
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background-color: $dark
+	z-index: 100
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin: 
+			left: -140px
+			top: -140px
+		&::before, &::after
+			content: ''
+			width: 280px
+			height: 280px
+			border-radius: 50%
+			position: absolute
+		&::before
+			border: 5px solid #979797
+			animation: pulse-outer .9s ease-in infinite 
+		&::after
+			border: 5px solid #979797
+			animation: pulse-inner .9s linear infinite 
+
+@keyframes pulse-outer 
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)	
+	100%
+		@include opacity(0)
+
+@keyframes pulse-inner 
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100%)
+		transform: scale(1)
+		
+
+
+
+
 .logo
 	display: inline-block
 	margin-left: 45px
@@ -594,19 +646,21 @@ $colors: $blue, $red, $accent
 					left: -10%
 
 footer.main-footer
-	padding: 3%
+	padding-top: 3%
+	padding-bottom: 1.5%
 	font-size: 14px
 
 .footer-column
 	margin: 15px 0
-	.logo-footer
+	.footer-logo
 		width: 100px
 		+ p
-			color: #888
+			color: #979797
 			padding: 0
 			margin: 8px 0 15px 0
 
 .footer-social
+	margin-top: 25px
 	.social
 		display: inline-block
 		color: #f0f0f0 !important
@@ -622,8 +676,81 @@ footer.main-footer
 		list-style-type: none
 		li
 			a
+				color: #979797
+				text-decoration: underline
+				display: block
+				padding: 4px 0 4px 20px
+				position: relative
+				&:before
+					position: absolute
+					font-family: fontawesome
+					content: '\f219'
+					color: #e0e0e0
+					font-size: 12px
+					margin-left: -20px
+					text-decoration: none
+					
+			&:hover, &:focus
+				a, a::before
+					color: $accent 
+					transition: color .25s ease
+		li.active
+			a, a::before
 				color: $accent
+.footer-contacts
+	position: relative
+	padding-left: 22px
+	.fa 
+		position: absolute
+		left: 0
+		top: 5px
+		color: #777
+		font-size: 18px
+		&.fa-mobile
+			font-size: 20px
+			left: 2px
+	a
+		text-decoration: none
+		color: #fff
+		&:hover, &:focus
+			text-decoration: none
+			color: #fff
+	&-phone
+		font-size: 18px
+		white-space: nowrap
+.map
+	opacity: .8
+	transition: opacity .5s ease
+	&:hover, &:focus
+		opacity: 1
+				
+.develop-site, .develop-site>a
+	text-align: right
+	font-size: 12px
+	color: #666
 
+.top-up
+	position: fixed
+	bottom: 5%
+	right: -100px
+	width: 50px
+	height: 50px
+	color: #666
+	background-color: #979797
+	font-size: 30px
+	text-align: center
+	line-height: 50px
+	border-radius: 50%
+	cursor: pointer
+	z-index: 3
+	opacity: .5
+	transition: all .3s ease
+	border: none
+	outline: none
+	&:hover, &:focus
+		color: #fff
+		background-color: $accent
+		opacity: 1
 
 
 

@@ -115,6 +115,28 @@ $(function() {
 		}
 	});
 
+	// Плавный скролл по якорям
+	$('a[href^="#"]').click(function() { 
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top;
+		$('html, body').animate({scrollTop: destination}, 800);
+		return false;
+	});
+
+	//Появление кнопки прокрутки "наверх"
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > $(this).height()) {
+			$('.top-up').css('right','5%');
+		} else {
+			$('.top-up').css('right','-100px');
+		}
+	});
+
+	// Прокрутка наверх при нажатии на кнопку "Наверх"
+	$('.top-up').click(function() {
+		$('html, body').stop().animate({scrollTop: 0}, 1000)
+	});
+
 
 	// **********equalHeights**********
 	$('.carousel-services-item-content_composition').equalHeights();
@@ -139,12 +161,9 @@ $(function() {
 		return false;
 	});
 
-	// Плавный скролл по якорям
-	$('a[href^="#"]').click(function() { 
-		var elementClick = $(this).attr("href");
-		var destination = $(elementClick).offset().top;
-		$('html, body').animate({scrollTop: destination}, 800);
-		return false;
+	// ******* Прелоадер *******
+	$(window).on('load', function() {
+		$('.preloader').delay(1000).fadeOut('slow');
 	});
 
 });

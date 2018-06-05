@@ -80,8 +80,12 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 	var buildFiles = gulp.src([
 		'app/*.html',
 		'app/.htaccess',
-		'app/mail.php',
+		'app/*.php',
 		]).pipe(gulp.dest('dist'));
+
+	var buildAjaxContent = gulp.src([
+		'app/ajax-content/*.html'
+		]).pipe(gulp.dest('dist/ajax-content'));
 
 	var buildCss = gulp.src([
 		'app/css/main.min.css',

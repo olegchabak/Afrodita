@@ -44,7 +44,8 @@ $(function() {
 		responsiveClass:true,
 		responsive: {
 			0: {
-				items: 1
+				items: 1,
+				autoplay: false
 			},
 			800: {
 				items: 2
@@ -63,12 +64,17 @@ $(function() {
 		$('.carousel-services-item').each(function(){
 			var ths = $(this),
 			thsh = ths.find('.carousel-services-item-content').outerHeight();
-			ths.find('.carousel-services-item_image').css('min-height', thsh);
+			if ($(window).width() > 480) {
+				ths.find('.carousel-services-item_image').css('min-height', thsh);
+			} else {
+				ths.find('.carousel-services-item_image').css('min-height', thsh/2);
+			}
+			
 		});
 	}
 	carouselServices();
 
-
+	//*********Rewiews carousel*********
 	$(".reviews-carousel").owlCarousel({
 		items: 1,
 		nav: false,

@@ -433,6 +433,7 @@ $colors: $blue, $red, $accent
 	.carousel-services-item
 		flex-direction: column
 
+
 .section-overlay
 	&::before
 		position: absolute
@@ -537,7 +538,7 @@ $colors: $blue, $red, $accent
 						transition: all .2s ease
 					.option
 						padding: 7px 25px
-			.private-policy
+			.private-policy-link
 				margin-top: 25px
 				font-size: 12px
 				input[type="checkbox"]
@@ -548,6 +549,7 @@ $colors: $blue, $red, $accent
 				a
 					color: #fff
 					text-decoration: underline dashed
+					outline: none
 			button
 				margin-top: 25px
 			.selectize-control.single .selectize-input:after
@@ -773,6 +775,47 @@ footer.main-footer
 			margin-top: 50px
 			font-size: 30px
 
+.price-full
+	position: relative
+	text-align: center
+	padding: 0 15px 30px
+	background-color: rgba($dark, .9)
+	color: #fff
+	width: auto
+	max-width: 700px
+	margin: auto
+	font-size: 14px
+	h2
+		padding-top: 30px
+		margin: 0
+	table
+		width: 100%
+		
+		caption
+			font-size: 20px
+			font-weight: 600
+			margin-top: 30px
+			margin-bottom: 10px
+		td, th
+			padding: 5px 10px
+		td:first-child
+			text-align: left
+		thead, td
+			border-bottom: 1px solid lighten($dark, 20%)
+.mfp-close-btn-in .mfp-close
+	color: inherit
+
+.private-policy
+	position: relative
+	padding: 30px 15px
+	background-color: rgba($dark, .9)
+	color: #fff
+	width: auto
+	max-width: 700px
+	margin: auto
+	font-size: 14px
+
+			
 
 
 @import "media" // Всегда в конце

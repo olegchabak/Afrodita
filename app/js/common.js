@@ -115,7 +115,13 @@ $(function() {
 		}
 	});
 
-	// Плавный скролл по якорям
+	// *********Magnific PopUp*********
+	$('.ajax-popup-link').magnificPopup({
+		type: 'ajax'
+	});
+
+
+	// ***Плавный скролл по якорям***
 	$('a[href^="#"]').click(function() { 
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top;
@@ -162,6 +168,7 @@ $(function() {
 		});
 		return false;
 	});
+
 
 	// ******* Прелоадер *******
 	$(window).on('load', function() {

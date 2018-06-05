@@ -33,6 +33,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/equalHeights/jquery.equalheights.min.js',
 		'app/libs/fotorama/fotorama.js',
 		'app/libs/selectize/js/standalone/selectize.min.js',
+		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

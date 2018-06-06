@@ -1,28 +1,11 @@
 $(function() {
 
-	var $menu = $("#my-menu").mmenu({
-		extensions: ['theme-black', 'fx-listitems-slide', 'border-none', 'pagedim-black', 'position-right'],
-		navbar: {
-			title: '<img src="img/logo1.png">'
-		}
-	});
-
-	var $icon = $("#my-icon");
-	var API = $menu.data( "mmenu" );
-
-	$icon.on( "click", function() {
-		API.open();
-	});
-
-	API.bind( "open:finish", function() {
-		setTimeout(function() {
-			$icon.addClass( "is-active" );
-		});
-	});
-	API.bind( "close:finish", function() {
-		setTimeout(function() {
-			$icon.removeClass( "is-active" );
-		});
+	// ***Плавный скролл по якорям***
+	$('a[href^="#"]').click(function() { 
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top;
+		$('html, body').animate({scrollTop: destination}, 800);
+		return false;
 	});
 
 	/***********Owl Carousel***********/
@@ -126,14 +109,6 @@ $(function() {
 		type: 'ajax'
 	});
 
-
-	// ***Плавный скролл по якорям***
-	$('a[href^="#"]').click(function() { 
-		var elementClick = $(this).attr("href");
-		var destination = $(elementClick).offset().top;
-		$('html, body').animate({scrollTop: destination}, 800);
-		return false;
-	});
 
 	//Появление кнопки прокрутки "наверх"
 	$(window).scroll(function(){

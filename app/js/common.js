@@ -96,13 +96,15 @@ $(function() {
 	});
 
 
-	$(".partners-carousel").owlCarousel({
-		items: 4,
+	//***********Specialists carousel***********
+	$(".specialists-carousel").owlCarousel({
+		items: 3,
 		nav: true,
 		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
 		smartSpeed:700,
 		loop: true,
 		autoplay: true,
+		margin: 15,
 		dots: false,
 		responsiveClass:true,
 		responsive: {
@@ -113,11 +115,9 @@ $(function() {
 				items: 2
 			},
 			992: {
-				items: 3
-			},
-			1200: {
-				items: 4
-			}
+				items: 3,
+				nav: false,
+				autoplay: false			}
 		}
 	});
 
@@ -150,9 +150,6 @@ $(function() {
 	});
 
 
-	// **********equalHeights**********
-	$('.carousel-services-item-content_composition').equalHeights();
-
 	// **********selectize**********
 	if ($(window).width() > 700) {
 		$('select').selectize();
@@ -174,6 +171,12 @@ $(function() {
 		});
 		return false;
 	});
+
+
+	// **********equalHeights**********
+	$('.carousel-services-item-content_composition').equalHeights();
+	$('.specialists-carousel-item-description>h4').equalHeights();
+	$('.specialists-carousel-item-description>p').equalHeights();
 
 
 	// ******* Прелоадер *******

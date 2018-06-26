@@ -157,9 +157,9 @@ $(function() {
 	$('.specialists-carousel-item-description>p').equalHeights();
 
 
-	// *** TEST notification ***
-	$('body').prepend('<div class="test" style="background-color:red;color:white;text-align:center;font-size:13px">Содержимое на данном сайте размещено в учебных целях или для тестовых работ и не является офертой! <b class="test-hide" style="margin-left:15px;cursor:pointer"> Скрыть&nbsp;&#10008;</b></div>');
-	$('.test-hide').on('click',function(){$('.test').slideUp()});
+	// // *** TEST notification ***
+	// $('body').prepend('<div class="test" style="background-color:red;color:white;text-align:center;font-size:13px">Содержимое на данном сайте размещено в учебных целях или для тестовых работ и не является офертой! <b class="test-hide" style="margin-left:15px;cursor:pointer"> Скрыть&nbsp;&#10008;</b></div>');
+	// $('.test-hide').on('click',function(){$('.test').slideUp()});
 
 
 	// ******* Прелоадер *******
